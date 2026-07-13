@@ -1,0 +1,61 @@
+{
+  "schema": "ClientHubFacts.v1",
+  "version": 1,
+  "updatedAt": "2026-07-13T00:24:26.381Z",
+  "businessName": "5SAnchor",
+  "projectTitle": "5SAnchor — Website Project",
+  "previewUrl": "",
+  "productionDomain": "",
+  "goalsSummary": "One or two sentences: what the site is for (client language).",
+  "assetsSummary": "Bullet-style lines Hub puts in “What client already has”.\nExample:\n• Logo: on site (from client Instagram / brand files)\n• Product photos: client-supplied, used in gallery\n• Preview: (fill previewUrl)",
+  "looksEstablished": true,
+  "confirmations": [
+    {
+      "id": "logo",
+      "group": "Brand & visuals",
+      "text": "Logo — we used your brand mark from [source] on the site. Is this your confirmed logo?"
+    },
+    {
+      "id": "photos",
+      "group": "Brand & visuals",
+      "text": "Photos — product/gallery images on the site came from your materials. Keep these as the official set?"
+    },
+    {
+      "id": "preview",
+      "group": "Site already built",
+      "text": "Preview site — the current build at [previewUrl] is for your business. Does it look like the right site?"
+    },
+    {
+      "id": "structure",
+      "group": "Site already built",
+      "text": "Pages / sections — the site is set up as [e.g. single-page with Home, About, Shop, Contact]. Still correct?"
+    },
+    {
+      "id": "commerce",
+      "group": "How the site works today",
+      "text": "Shopping — purchases go through [Etsy / other], not an on-site cart. Is that how you want it?"
+    },
+    {
+      "id": "contact",
+      "group": "How the site works today",
+      "text": "Contact form — people can reach you through the site form. Should messages go to [email]?"
+    },
+    {
+      "id": "socials",
+      "group": "Links & shopping",
+      "text": "Social links — Instagram / Facebook (etc.) on the site point to your accounts. Are those the correct profiles?"
+    },
+    {
+      "id": "golive",
+      "group": "Go-live (needs your OK)",
+      "text": "Public launch — the site stays on a private/demo preview until you approve domain + go-live. Still correct?"
+    }
+  ],
+  "socials": {
+    "instagram": "",
+    "facebook": "",
+    "etsy": "",
+    "other": []
+  },
+  "notesForOperator": "Edit confirmations after each meaningful build slice. Hub prefers this file over guessed inventory. Never put stack/Vite/React here."
+}

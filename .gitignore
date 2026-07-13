@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Build
+dist/
+dist-ssr/
+*.local
+
+# Logs / cache
+logs/
+*.log
+npm-debug.log*
+.pnpm-debug.log*
+.cache/
+.turbo/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+*.swo
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# TypeScript / tooling
+*.tsbuildinfo
+.eslintcache
+
+# PWA / workbox generated (if any outside dist)
+dev-dist/
+
+# Test / coverage
+coverage/
+
+# Local backups
+*.backup.json

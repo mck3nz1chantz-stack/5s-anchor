@@ -1,0 +1,105 @@
+{
+  "project": "5SAnchor",
+  "launcher": "/Users/kenzi/Desktop/ChantzMediaLauncher",
+  "version": "0.1.0",
+  "envVars": [],
+  "limitations": [
+    "MVP uses IndexedDB offline store; remote REST not wired yet",
+    "Demo role picker instead of real auth"
+  ],
+  "complianceNotes": [
+    "Plant photos may contain PII — GrokLaw if multi-user hosted"
+  ],
+  "grokBuildStatus": "mvp-demo",
+  "grokDocsStatus": "pending",
+  "grokLawStatus": "awareness",
+  "plantForge": {
+    "programPhase": 2,
+    "archetypeId": "five-s-guider",
+    "briefPath": "docs/plantforge/industrial-app-brief.v1.json",
+    "status": "mvp_running",
+    "currentSlice": "dashboard-heatmap-trends",
+    "deploymentMode": "pwa-local",
+    "updatedAt": "2026-07-12T00:00:00.000Z"
+  },
+  "documentDeployment": {
+    "status": "pending",
+    "mode": "local-pdf",
+    "packageMode": "deployment",
+    "packageVersion": null,
+    "packageDir": null,
+    "autoTrigger": false,
+    "completedAt": null,
+    "pdfPackagePath": null,
+    "clientFormPath": null,
+    "packageZipPath": null,
+    "webDeploy": false,
+    "cloudflareDeploy": false,
+    "lastDemoVersion": 0,
+    "lastDeploymentVersion": 0,
+    "sequentialVersion": null,
+    "versioningEnabled": false
+  },
+  "clientHub": {
+    "factsPath": "docs/client-hub/facts.v1.json",
+    "factsSchema": "ClientHubFacts.v1"
+  },
+  "mediaJob": {
+    "schema": "MediaJob.v1",
+    "stage": "build",
+    "stageUpdatedAt": "2026-07-13T00:30:00.000Z",
+    "history": [
+      {
+        "stage": "intake",
+        "at": "2026-07-13T00:24:26.373Z",
+        "note": "initialized"
+      },
+      {
+        "stage": "build",
+        "at": "2026-07-13T00:30:00.000Z",
+        "note": "MVP PWA scaffold + design package"
+      }
+    ],
+    "flags": {
+      "growthOptional": true,
+      "growthDone": false,
+      "intakeSeeded": true,
+      "skipGrowth": true,
+      "mktgResearchOptional": true,
+      "mktgResearchDone": false,
+      "skipMktgResearch": true,
+      "marketingAdviceOptIn": false,
+      "siteProfileGateBypass": true
+    },
+    "lastMediaLaunchAt": null,
+    "notes": "PlantForge industrial app — not MediaLaunch site"
+  },
+  "campaignLoop": {
+    "schema": "CampaignLoop.v1",
+    "enabled": false,
+    "currentRound": 0,
+    "lastRoundAt": null,
+    "rounds": [],
+    "lastHandoffPath": null,
+    "lastMetricsPath": null
+  },
+  "session": {
+    "latestSummaryPath": "docs/session/latest.md",
+    "lastPhaseSummaryPath": null,
+    "lastPhaseSummaryAt": null,
+    "lastPhase": null
+  },
+  "assets": {
+    "manifestPath": null,
+    "lastUpdatedAt": null,
+    "round": 0
+  },
+  "discoverability": {
+    "seo": "n/a-internal-tool",
+    "aieo": "n/a",
+    "notes": ["Internal plant PWA — public SEO not required for MVP"],
+    "updatedAt": "2026-07-13T00:30:00.000Z"
+  },
+  "created": "2026-07-13T00:24:26.379Z",
+  "updated": "2026-07-13T00:30:00.000Z"
+}

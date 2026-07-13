@@ -1,0 +1,93 @@
+{
+  "schema": "IndustrialAppBrief.v1",
+  "projectName": "5SAnchor",
+  "displayName": "5S Anchor",
+  "archetypeId": "five-s-guider",
+  "oneLiner": "Mobile-first PWA that guides and sustains 5S/6S on the shop floor with red tags, scored audits, corrective actions, and offline-first sync designed for later Ignition/MES integration.",
+  "deploymentMode": "pwa-local",
+  "stackHint": "vite-react",
+  "workflow": {
+    "states": [
+      { "id": "draft", "label": "Draft" },
+      { "id": "open", "label": "Open" },
+      { "id": "in-review", "label": "In Review" },
+      { "id": "dispositioned", "label": "Dispositioned" },
+      { "id": "closed", "label": "Closed" }
+    ],
+    "transitions": [
+      { "from": "draft", "to": "open", "rolesAllowed": ["operator", "supervisor", "manager", "admin"] },
+      { "from": "open", "to": "in-review", "rolesAllowed": ["supervisor", "manager", "admin"] },
+      { "from": "in-review", "to": "dispositioned", "rolesAllowed": ["supervisor", "manager", "admin"] },
+      { "from": "dispositioned", "to": "closed", "rolesAllowed": ["supervisor", "manager", "admin"] },
+      { "from": "open", "to": "dispositioned", "rolesAllowed": ["supervisor", "manager", "admin"] }
+    ],
+    "terminalStates": ["closed"]
+  },
+  "roles": [
+    {
+      "id": "operator",
+      "label": "Operator",
+      "powers": ["perform-tasks", "create-red-tags", "run-audits", "own-corrective-actions", "view-standards"]
+    },
+    {
+      "id": "supervisor",
+      "label": "Supervisor",
+      "powers": ["review", "assign", "approve-disposition", "area-dashboard", "schedules"]
+    },
+    {
+      "id": "manager",
+      "label": "Manager",
+      "powers": ["plant-dashboard", "analytics", "exports", "configure-checklists"]
+    },
+    {
+      "id": "admin",
+      "label": "Admin",
+      "powers": ["users", "plants", "all-areas", "config", "exports", "audit-trail"]
+    }
+  ],
+  "entities": [
+    "Plant",
+    "Area",
+    "Zone",
+    "Equipment",
+    "User",
+    "RedTag",
+    "Audit",
+    "ChecklistTemplate",
+    "AuditItem",
+    "CorrectiveAction",
+    "Photo",
+    "Schedule",
+    "ScoreSnapshot",
+    "VisualStandard",
+    "Notification"
+  ],
+  "areas": ["Machine Cell", "Assembly Line", "Warehouse", "Maintenance Shop", "Shipping"],
+  "exportNeeds": ["csv", "json", "pdf"],
+  "referencePatterns": ["timetrack-roles", "shopfloor-ux", "pwa-offline"],
+  "prioritySlices": [
+    "shell-roles-pwa",
+    "offline-store-seed",
+    "red-tag-workflow",
+    "audit-checklist-scoring",
+    "corrective-actions",
+    "dashboard-heatmap-trends",
+    "visual-standards",
+    "schedules-reminders",
+    "api-contract-ignition-path"
+  ],
+  "nonGoals": [
+    "Full MES/ERP/SCADA replacement",
+    "Multi-tenant public SaaS in v1",
+    "Direct live Ignition tag writes in MVP (API contract + webhooks first)",
+    "Photo annotation / voice notes in first pass",
+    "Corporate multi-site BI platform"
+  ],
+  "grokLawTriggers": [
+    "Plant photos may contain people/PII",
+    "Multi-user auth when hosted",
+    "Client plant data leaving device"
+  ],
+  "createdAt": "2026-07-12T00:00:00.000Z",
+  "sourceUtterance": "Build complete mobile-first PWA 5S Anchor for manufacturing 5S/6S with red tags, audits, dashboard, schedules, kaizen tracking, visual standards, offline, Ignition path."
+}
