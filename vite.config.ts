@@ -3,7 +3,11 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
+/** GitHub project pages: https://<user>.github.io/5s-anchor/ */
+const base = process.env.GITHUB_PAGES === 'true' ? '/5s-anchor/' : '/'
+
 export default defineConfig({
+  base,
   plugins: [
     react(),
     tailwindcss(),
@@ -18,7 +22,8 @@ export default defineConfig({
         background_color: '#0f172a',
         display: 'standalone',
         orientation: 'portrait-primary',
-        start_url: '/',
+        start_url: base,
+        scope: base,
         icons: [
           {
             src: 'favicon.svg',
@@ -30,7 +35,7 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,ico,png,woff2}'],
-        navigateFallback: '/index.html',
+        navigateFallback: `${base}index.html`.replace(/\/+/g, '/'),
       },
     }),
   ],
@@ -39,3 +44,4 @@ export default defineConfig({
     port: 5175,
   },
 })
+

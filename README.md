@@ -34,7 +34,22 @@ All under `docs/design/`:
 Ignition notes: `docs/integration/ignition.md`  
 Brief: `docs/plantforge/`
 
-## Quick start
+## Live demo (Safari → Add to Home Screen)
+
+After GitHub Pages is enabled and the deploy workflow has run:
+
+**https://mck3nz1chantz-stack.github.io/5s-anchor/**
+
+1. Open that URL in **Safari** on iPhone/iPad  
+2. Share → **Add to Home Screen**  
+3. Open the icon (standalone PWA)
+
+### Enable GitHub Pages (one-time)
+
+Repo → **Settings** → **Pages** → **Build and deployment** → Source: **GitHub Actions**  
+(Then push to `main` or re-run the “Deploy GitHub Pages” workflow.)
+
+## Quick start (local)
 
 ```bash
 cd ~/Desktop/ChantzMediaProjects/5SAnchor
@@ -44,7 +59,7 @@ npm run dev
 
 - Local: http://localhost:5175  
 - Phone on same Wi‑Fi: use the LAN URL Vite prints  
-- Install: browser → Add to Home Screen (PWA)
+- Local install: Safari/Chrome → Add to Home Screen (LAN URL)
 
 ### Demo path (2 minutes)
 
